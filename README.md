@@ -57,49 +57,37 @@ A documentação inclui:
 
 ## 🏃 Como Executar Localmente
 
-### Requisitos
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
-- Servidor HTTP local (opcional)
+Para visualizar a apresentação web e protótipos, execute um servidor HTTP local:
 
-### Opção 1: Python
 ```bash
+# Python
 python3 -m http.server 8000
-```
 
-### Opção 2: Node.js
-```bash
+# Node.js
 npx http-server -p 8000
-```
 
-### Opção 3: PHP
-```bash
+# PHP
 php -S localhost:8000
 ```
 
-Depois acesse:
+Acesse:
 - **Apresentação**: `http://localhost:8000/index.html`
 - **Protótipos**: `http://localhost:8000/mockup.html`
+
+📖 **Instruções detalhadas**: Veja [doc/README.md](./doc/README.md)
 
 ## 📁 Estrutura do Projeto
 
 ```
 diario-cuidador/
-├── doc/                          # Documentação completa
-│   ├── README.md                 # Índice de documentação
-│   ├── pesquida.md               # Pré-projeto científico
-│   ├── resumo-executivo-roadmap.md
-│   └── roadmap-mvp-expandido.md
-├── fluxo/                       # Recursos visuais
-│   ├── mvp-roadmap.png
-│   └── exemplo-fluxo.png
-├── index.html                   # Apresentação web interativa
-├── mockup.html                  # Protótipos visuais
-├── styles.css                   # Estilos da apresentação
-├── mockup-styles.css           # Estilos dos mockups
-├── script.js                    # JavaScript da apresentação
-├── mockup-script.js            # JavaScript dos mockups
-└── README.md                    # Este arquivo
+├── doc/                    # Documentação completa (veja doc/README.md)
+├── fluxo/                  # Recursos visuais (roadmaps, diagramas)
+├── index.html             # Apresentação web interativa
+├── mockup.html            # Protótipos visuais do app
+└── README.md              # Este arquivo
 ```
+
+📖 **Estrutura detalhada**: Veja [doc/README.md](./doc/README.md#estrutura-do-projeto)
 
 ## 🔬 Base Científica
 
