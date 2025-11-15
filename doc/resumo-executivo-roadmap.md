@@ -65,7 +65,7 @@ O **Diário do Cuidador** é uma plataforma móvel inteligente que reduz a sobre
 
 1. ✅ **Aprovação executiva** 
 2. ✅ **Formação da equipe** (dev full-stack, designer UX/UI)
-3. ✅ **Setup técnico** (repositório Git, ambientes)
+3. ✅ **Setup técnico** (repositório Git criado e conectado ao GitHub) ⭐ NOVO
 4. ✅ **Apresentação executiva** (landing page interativa criada) ⭐ NOVO
 5. ✅ **Protótipos visuais** (mockups das telas principais criados) ⭐ NOVO
 

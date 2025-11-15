@@ -375,7 +375,7 @@ Feedback registrado no sistema → Cuidador recebe confirmação
 - [ ] Definição de Scrum Master
 
 ### 11.3 Setup Inicial
-- [ ] Criação de repositório Git (branch `mvp-plataforma`)
+- [x] Criação de repositório Git (branch `main`) ✅
 - [ ] Setup de ambiente de desenvolvimento
 - [ ] Definição de processos (Git flow, code review)
 - [ ] Setup de ferramentas (Jira/Trello, Slack)
