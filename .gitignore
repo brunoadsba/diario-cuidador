@@ -1,0 +1,75 @@
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build/Compilação
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Ambiente e Configuração
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Temporários e Cache
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+.next/
+out/
+
+# Arquivos específicos do projeto
+deploy-netlify.zip
+
+# Backup
+*.bak
+*.backup
+*~
+
+# Testes
+coverage/
+.nyc_output/
+*.test.js.snap
+
+# Documentação temporária
+*.docx
+*.xlsx
+*.pptx
+

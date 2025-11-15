@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário do Cuidador - Apresentação MVP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação Lateral -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Diário do Cuidador</h2>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#visao-geral" class="nav-link active">Visão Geral</a></li>
+            <li><a href="#problema" class="nav-link">Problema</a></li>
+            <li><a href="#solucao" class="nav-link">Solução</a></li>
+            <li><a href="#visualizacao" class="nav-link">Visualização</a></li>
+            <li><a href="#funcionalidades" class="nav-link">Funcionalidades</a></li>
+            <li><a href="#cronograma" class="nav-link">Cronograma</a></li>
+            <li><a href="#cronograma-detalhado" class="nav-link">Cronograma Detalhado</a></li>
+            <li><a href="#metricas" class="nav-link">Métricas</a></li>
+            <li><a href="#custos" class="nav-link">Investimento</a></li>
+            <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+            <li><a href="#proximos-passos" class="nav-link">Próximos Passos</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>Use as setas ↑↓ para navegar</p>
+        </div>
+    </nav>
+
+    <!-- Botão de Menu Mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Seção 1: Visão Geral / Hero -->
+        <section id="visao-geral" class="slide hero-slide">
+            <div class="slide-content">
+                <div class="hero-content">
+                    <h1 class="hero-title">Diário do Cuidador</h1>
+                    <p class="hero-subtitle">Plataforma móvel inteligente que reduz a sobrecarga de cuidadores familiares de pessoas com demência</p>
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">18</span>
+                            <span class="highlight-label">semanas</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">4.5</span>
+                            <span class="highlight-label">meses</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">MVP</span>
+                            <span class="highlight-label">completo</span>
+                        </div>
+                    </div>
+                    <div class="scroll-indicator">
+                        <span>Role para baixo</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Problema -->
+        <section id="problema" class="slide problem-slide">
+            <div class="slide-content">
+                <h2 class="section-title">O Problema</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="card-icon">😰</div>
+                        <h3>Cuidadores Sobrecarregados</h3>
+                        <p>Alta sobrecarga física e emocional identificada em estudos científicos</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="card-icon">⏱️</div>
+                        <h3>Janela Curta de Observação</h3>
+                        <p>Médicos têm pouco tempo para acompanhar em consultas ambulatoriais</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="card-icon">📝</div>
+                        <h3>Relatos Incompletos</h3>
+                        <p>Registros sujeitos a viés de recordação e informações incompletas</p>
+                    </div>
+                </div>
+                <div class="evidence-box">
+                    <h3>Evidências Científicas</h3>
+                    <ul>
+                        <li>Diários digitais reduzem sintomas depressivos em cuidadores (Fuju et al., 2021)</li>
+                        <li>"Diário positivo" aumenta bem-estar e reduz sobrecarga (Kurinobu, 2024)</li>
+                        <li>Intervenções psicossociais eficazes para reduzir burden (Rodríguez-Alcázar et al., 2024)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Solução -->
+        <section id="solucao" class="slide solution-slide">
+            <div class="slide-content">
+                <h2 class="section-title">A Solução</h2>
+                <p class="section-subtitle">Plataforma móvel que combina registro estruturado, alertas inteligentes e autocuidado</p>
+                <div class="solution-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon">📱</div>
+                        <h3>Registro Estruturado</h3>
+                        <p>Sintomas comportamentais e bem-estar do cuidador com interface intuitiva</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🔔</div>
+                        <h3>Alertas Inteligentes</h3>
+                        <p>Baseados em regras automáticas simples (versão inicial) → Inteligência artificial avançada (futuro)</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">💚</div>
+                        <h3>Autocuidado</h3>
+                        <p>Módulo com práticas validadas cientificamente</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">📊</div>
+                        <h3>Relatórios Clínicos</h3>
+                        <p>Documentos organizados com gráficos e tendências para equipe médica</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3.5: Visualização do App -->
+        <section id="visualizacao" class="slide visualization-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Visualização do App</h2>
+                <p class="section-subtitle">Protótipos visuais das telas principais da versão inicial</p>
+                
+                <div class="mockup-preview-container">
+                    <div class="mockup-grid">
+                        <div class="mockup-preview-card">
+                            <div class="mockup-preview-header">
+                                <div class="phone-mini">
+                                    <div class="screen-mini home-mini">
+                                        <div class="mini-header">Home</div>
+                                        <div class="mini-content">
+                                            <div class="mini-card">📝 Registro</div>
+                                            <div class="mini-summary">
+                                                <span>Humor: 7/10</span>
+                                                <span>Estresse: 5/10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Home/Dashboard</h3>
+                            <p>Visão geral do dia com resumo rápido</p>
+                        </div>
+
+                        <div class="mockup-preview-card">
+                            <div class="mockup-preview-header">
+                                <div class="phone-mini">
+                                    <div class="screen-mini registro-mini">
+                                        <div class="mini-header">Registro</div>
+                                        <div class="mini-content">
+                                            <div class="mini-step">1/3</div>
+                                            <div class="mini-emoji">😊 7/10</div>
+                                            <div class="mini-btn">Próximo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Registro Diário</h3>
+                            <p>Interface simples, máximo 3 toques</p>
+                        </div>
+
+                        <div class="mockup-preview-card">
+                            <div class="mockup-preview-header">
+                                <div class="phone-mini">
+                                    <div class="screen-mini graficos-mini">
+                                        <div class="mini-header">Tendências</div>
+                                        <div class="mini-content">
+                                            <div class="mini-chart">
+                                                <div class="mini-bars">
+                                                    <div style="height: 60%"></div>
+                                                    <div style="height: 70%"></div>
+                                                    <div style="height: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Gráficos</h3>
+                            <p>Visualização de tendências semanais</p>
+                        </div>
+
+                        <div class="mockup-preview-card">
+                            <div class="mockup-preview-header">
+                                <div class="phone-mini">
+                                    <div class="screen-mini alertas-mini">
+                                        <div class="mini-header">Alertas 🔔</div>
+                                        <div class="mini-content">
+                                            <div class="mini-alert green">💚 Tudo bem</div>
+                                            <div class="mini-alert yellow">🟡 Atenção</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Alertas</h3>
+                            <p>Notificações automáticas inteligentes</p>
+                        </div>
+                    </div>
+
+                    <div class="mockup-cta">
+                        <h3>Explore o protótipo completo</h3>
+                        <p>Visualize todas as telas interativas do aplicativo</p>
+                        <a href="mockup.html" class="btn-mockup" target="_blank">Abrir Protótipo Completo →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Funcionalidades -->
+        <section id="funcionalidades" class="slide features-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Funcionalidades da Versão Inicial</h2>
+                <div class="features-container">
+                    <div class="feature-section">
+                        <h3>✅ O Que Está Incluído</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div>
+                                    <strong>Registro Diário Simplificado</strong>
+                                    <p>Sintomas comportamentais do paciente e bem-estar do cuidador - Interface intuitiva (máximo 3 toques por tela)</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div>
+                                    <strong>Sistema de Alertas Inteligentes</strong>
+                                    <p>Regras automáticas simples baseadas em padrões conhecidos - Notificações automáticas para cuidador e profissional</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div>
+                                    <strong>Módulo de Autocuidado</strong> ⭐
+                                    <p>Diário positivo (evidência científica) - Lembretes de pausa e exercícios de respiração</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div>
+                                    <strong>Relatórios Clínicos</strong>
+                                    <p>Documento organizado com gráficos e tendências - Pronto para compartilhamento com equipe médica</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div>
+                                    <strong>Integração Clínica</strong>
+                                    <p>Parceria com equipe especializada em saúde de idosos - Compromisso de tempo de resposta definido (2h a 7 dias conforme urgência)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-section">
+                        <h3>⏳ O Que Fica Para Depois</h3>
+                        <div class="feature-list future">
+                            <div class="feature-item">
+                                <span class="feature-check">○</span>
+                                <div>
+                                    <strong>IA Preditiva</strong>
+                                    <p>Após coletar 3+ meses de dados históricos</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">○</span>
+                                <div>
+                                    <strong>IA Educativa</strong>
+                                    <p>Recomendações baseadas em evidências científicas</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">○</span>
+                                <div>
+                                    <strong>Círculo de Cuidado</strong>
+                                    <p>Rede colaborativa entre familiares</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Cronograma Resumido -->
+        <section id="cronograma" class="slide timeline-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Cronograma Resumido</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Fase 0</div>
+                        <div class="timeline-content">
+                            <h3>Protótipo Navegável</h3>
+                            <p class="timeline-duration">4 semanas</p>
+                            <p>Prototipo navegável, validação de conceito</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Fase 1</div>
+                        <div class="timeline-content">
+                            <h3>Sistema Completo</h3>
+                            <p class="timeline-duration">8 semanas</p>
+                            <p>Sistema completo, testes internos</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">Fase 2</div>
+                        <div class="timeline-content">
+                            <h3>Piloto Controlado</h3>
+                            <p class="timeline-duration">6 semanas</p>
+                            <p>Piloto com 20-30 cuidadores reais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-timeline">
+                    <strong>Total: 18 semanas (4,5 meses)</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Cronograma Detalhado -->
+        <section id="cronograma-detalhado" class="slide detailed-timeline-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Cronograma Detalhado</h2>
+                <div class="detailed-timeline-container">
+                    <div class="phase-detailed">
+                        <h3>Fase 0: Protótipo Navegável (4 semanas)</h3>
+                        <ul>
+                            <li><strong>Semana 1-2:</strong> Setup do projeto, arquitetura base, telas principais</li>
+                            <li><strong>Semana 3:</strong> Integração com sistema de teste, fluxo básico de registro</li>
+                            <li><strong>Semana 4:</strong> Testes internos, ajustes de interface, validação de conceito</li>
+                        </ul>
+                    </div>
+                    <div class="phase-detailed">
+                        <h3>Fase 1: Release Interno (8 semanas)</h3>
+                        <ul>
+                            <li><strong>Semana 1-2:</strong> Sistema completo (conexões, segurança, armazenamento de dados)</li>
+                            <li><strong>Semana 3-4:</strong> Sistema de alertas automáticos implementado</li>
+                            <li><strong>Semana 5-6:</strong> Módulo de autocuidado, geração de documentos</li>
+                            <li><strong>Semana 7:</strong> Testes de integração, correções de bugs</li>
+                            <li><strong>Semana 8:</strong> Testes de usabilidade com 5-7 cuidadores, refinamentos</li>
+                        </ul>
+                    </div>
+                    <div class="phase-detailed">
+                        <h3>Fase 2: Piloto Controlado (6 semanas)</h3>
+                        <ul>
+                            <li><strong>Semana 1:</strong> Recrutamento de 20-30 cuidadores (parceria clínica)</li>
+                            <li><strong>Semana 2-4:</strong> Uso em produção com suporte ativo</li>
+                            <li><strong>Semana 5:</strong> Coleta de feedback qualitativo</li>
+                            <li><strong>Semana 6:</strong> Análise de dados, relatório de resultados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-image-container">
+                    <p class="image-note">Para visualização completa do roadmap visual, consulte:</p>
+                    <code>fluxo/mvp-roadmap.png</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Métricas -->
+        <section id="metricas" class="slide metrics-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Métricas de Sucesso</h2>
+                <div class="metrics-grid">
+                    <div class="metrics-category">
+                        <h3>Adoção</h3>
+                        <div class="metric-item">
+                            <span class="metric-label">Retenção semanal</span>
+                            <span class="metric-value">≥ 60%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Taxa de preenchimento</span>
+                            <span class="metric-value">≥ 5 registros/semana</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Tempo médio de uso</span>
+                            <span class="metric-value">≥ 2 min/dia</span>
+                        </div>
+                    </div>
+                    <div class="metrics-category">
+                        <h3>Clínicas</h3>
+                        <div class="metric-item">
+                            <span class="metric-label">Redução de sobrecarga do cuidador</span>
+                            <span class="metric-value">≥ 5 pontos</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Redução sintomas depressivos</span>
+                            <span class="metric-value">≥ 2 pontos</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Satisfação do cuidador</span>
+                            <span class="metric-value">≥ 4/5</span>
+                        </div>
+                    </div>
+                    <div class="metrics-category">
+                        <h3>Técnicas</h3>
+                        <div class="metric-item">
+                            <span class="metric-label">Uptime</span>
+                            <span class="metric-value">≥ 99.5%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Tempo de resposta do sistema</span>
+                            <span class="metric-value">< 500ms</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Taxa de erro</span>
+                            <span class="metric-value">< 1%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 8: Custos -->
+        <section id="custos" class="slide costs-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Investimento</h2>
+                <div class="costs-container">
+                    <div class="cost-table">
+                        <h3>Desenvolvimento MVP (18 semanas)</h3>
+                        <table>
+                            <tr>
+                                <td>Desenvolvedor Full-stack (1,5 FTE)</td>
+                                <td class="cost-value">R$ 81.000</td>
+                            </tr>
+                            <tr>
+                                <td>Designer de interface e experiência (0,5 FTE)</td>
+                                <td class="cost-value">R$ 18.000</td>
+                            </tr>
+                            <tr>
+                                <td>QA/Tester (0,3 FTE)</td>
+                                <td class="cost-value">R$ 8.100</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Subtotal Desenvolvimento</strong></td>
+                                <td class="cost-value"><strong>R$ 107.100</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cost-table">
+                        <h3>Infraestrutura (Mensal)</h3>
+                        <table>
+                            <tr>
+                                <td>Hospedagem (AWS/GCP)</td>
+                                <td class="cost-value">R$ 300</td>
+                            </tr>
+                            <tr>
+                                <td>Banco de Dados</td>
+                                <td class="cost-value">R$ 200</td>
+                            </tr>
+                            <tr>
+                                <td>Storage + CDN</td>
+                                <td class="cost-value">R$ 150</td>
+                            </tr>
+                            <tr>
+                                <td>Monitoramento</td>
+                                <td class="cost-value">R$ 150</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Subtotal Mensal</strong></td>
+                                <td class="cost-value"><strong>R$ 800/mês</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cost-summary">
+                        <div class="summary-card">
+                            <h3>Total MVP</h3>
+                            <p class="total-amount">R$ 142.900</p>
+                            <p class="summary-note">* Inclui desenvolvimento + infraestrutura (6 meses) + pesquisa clínica opcional</p>
+                            <div class="investment-link">
+                                <a href="doc/investimento.html" target="_blank" class="investment-details-link">
+                                    Clique aqui para maiores detalhes sobre o custo do investimento →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 9: Diferenciais -->
+        <section id="diferenciais" class="slide differentiators-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Diferenciais Competitivos</h2>
+                <div class="differentiators-grid">
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">🔬</div>
+                        <h3>Evidência Científica</h3>
+                        <p>Baseado em estudos validados (diário positivo, redução de burden)</p>
+                    </div>
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">💚</div>
+                        <h3>Foco no Cuidador</h3>
+                        <p>Não apenas registro, mas autocuidado e acolhimento</p>
+                    </div>
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">🏥</div>
+                        <h3>Integração Clínica</h3>
+                        <p>Não é apenas um app, é parte do cuidado de saúde</p>
+                    </div>
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">🧠</div>
+                        <h3>Evolução Inteligente</h3>
+                        <p>Regras automáticas simples agora, inteligência artificial avançada no futuro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 10: Próximos Passos -->
+        <section id="proximos-passos" class="slide next-steps-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Próximos Passos Imediatos</h2>
+                <div class="next-steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Aprovação Executiva</h3>
+                        <ul>
+                            <li>Apresentação do roadmap</li>
+                            <li>Aprovação de orçamento</li>
+                            <li>Definição de patrocinador</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Formação da Equipe</h3>
+                        <ul>
+                            <li>Desenvolvedor full-stack</li>
+                            <li>Designer de interface e experiência</li>
+                            <li>Product Owner clínico</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Setup Inicial</h3>
+                        <ul>
+                            <li>Repositório Git</li>
+                            <li>Ambiente de desenvolvimento</li>
+                            <li>Processos e ferramentas</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Parcerias</h3>
+                        <ul>
+                            <li>Equipe especializada em saúde de idosos</li>
+                            <li>Alinhamento de tempo de resposta</li>
+                            <li>Termo de parceria</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cta-section">
+                    <h3>Pronto para começar?</h3>
+                    <p>Vamos transformar o cuidado de pessoas com demência.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p><strong>Diário do Cuidador</strong> - Plataforma MVP</p>
+                <p>Última atualização: Novembro 2025 | Versão 2.0</p>
+                <p class="footer-note">Use as setas ↑↓ do teclado ou clique nas seções do menu para navegar</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Controles de Navegação -->
+    <div class="nav-controls">
+        <button class="nav-btn prev-btn" id="prevBtn" aria-label="Slide anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Próximo slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

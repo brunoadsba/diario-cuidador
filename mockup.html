@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário do Cuidador - Mockups do App</title>
+    <link rel="stylesheet" href="mockup-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mockup-container">
+        <!-- Header -->
+        <header class="mockup-header">
+            <h1>Visualização do App - Diário do Cuidador</h1>
+            <p>Protótipos das telas principais da versão inicial</p>
+        </header>
+
+        <!-- Navegação entre telas -->
+        <nav class="screen-nav">
+            <button class="nav-screen-btn active" data-screen="home">Home</button>
+            <button class="nav-screen-btn" data-screen="registro">Registro</button>
+            <button class="nav-screen-btn" data-screen="graficos">Gráficos</button>
+            <button class="nav-screen-btn" data-screen="alertas">Alertas</button>
+            <button class="nav-screen-btn" data-screen="autocuidado">Autocuidado</button>
+            <button class="nav-screen-btn" data-screen="relatorios">Relatórios</button>
+        </nav>
+
+        <!-- Container do telefone -->
+        <div class="phone-container">
+            <div class="phone-frame">
+                <!-- Tela 1: Home/Dashboard -->
+                <div class="screen active" id="screen-home">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <h2>Olá, Maria</h2>
+                            <p>Segunda-feira, 18 de Nov</p>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="quick-card">
+                            <div class="quick-card-icon">📝</div>
+                            <div class="quick-card-content">
+                                <h3>Registro de Hoje</h3>
+                                <p>Complete seu registro diário</p>
+                            </div>
+                            <button class="btn-primary">Registrar</button>
+                        </div>
+
+                        <div class="summary-grid">
+                            <div class="summary-card">
+                                <div class="summary-label">Humor Hoje</div>
+                                <div class="summary-value positive">7/10</div>
+                            </div>
+                            <div class="summary-card">
+                                <div class="summary-label">Estresse</div>
+                                <div class="summary-value warning">5/10</div>
+                            </div>
+                            <div class="summary-card">
+                                <div class="summary-label">Sono</div>
+                                <div class="summary-value">6h</div>
+                            </div>
+                        </div>
+
+                        <div class="section-title">Últimos Alertas</div>
+                        <div class="alert-item">
+                            <div class="alert-icon">💚</div>
+                            <div class="alert-content">
+                                <strong>Tudo bem</strong>
+                                <p>Seus registros estão dentro da normalidade</p>
+                            </div>
+                        </div>
+
+                        <div class="section-title">Autocuidado</div>
+                        <div class="care-card">
+                            <div class="care-icon">✨</div>
+                            <div class="care-content">
+                                <strong>Diário Positivo</strong>
+                                <p>Registre 3 coisas boas do seu dia</p>
+                            </div>
+                            <button class="btn-secondary">Começar</button>
+                        </div>
+                    </div>
+                    <div class="bottom-nav">
+                        <div class="nav-item active">🏠</div>
+                        <div class="nav-item">📊</div>
+                        <div class="nav-item">🔔</div>
+                        <div class="nav-item">💚</div>
+                    </div>
+                </div>
+
+                <!-- Tela 2: Registro Diário -->
+                <div class="screen" id="screen-registro">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <button class="back-btn">←</button>
+                            <h2>Registro Diário</h2>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="form-step">
+                            <div class="step-indicator">
+                                <span class="step active">1</span>
+                                <span class="step">2</span>
+                                <span class="step">3</span>
+                            </div>
+                            <h3>Como está seu humor hoje?</h3>
+                            <div class="emoji-scale">
+                                <button class="emoji-btn">😢</button>
+                                <button class="emoji-btn">😕</button>
+                                <button class="emoji-btn">😐</button>
+                                <button class="emoji-btn">🙂</button>
+                                <button class="emoji-btn active">😊</button>
+                            </div>
+                            <div class="scale-label">7/10</div>
+                            <button class="btn-primary full-width">Próximo</button>
+                        </div>
+
+                        <div class="info-box">
+                            <p>💡 <strong>Dica:</strong> Este registro leva menos de 2 minutos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tela 3: Gráficos/Tendências -->
+                <div class="screen" id="screen-graficos">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <h2>Tendências</h2>
+                            <select class="period-select">
+                                <option>Última semana</option>
+                                <option>Último mês</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="chart-container">
+                            <div class="chart-title">Evolução do Humor</div>
+                            <div class="chart-placeholder">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 65%"></div>
+                                    <div class="bar" style="height: 75%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Seg</span>
+                                    <span>Ter</span>
+                                    <span>Qua</span>
+                                    <span>Qui</span>
+                                    <span>Sex</span>
+                                    <span>Sáb</span>
+                                    <span>Dom</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="chart-title">Nível de Estresse</div>
+                            <div class="chart-placeholder">
+                                <div class="chart-line">
+                                    <svg viewBox="0 0 200 100" style="width: 100%; height: 120px;">
+                                        <polyline points="0,80 30,70 60,65 90,60 120,55 150,50 180,45" 
+                                                  fill="none" stroke="#ef4444" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="insight-card">
+                            <div class="insight-icon">📈</div>
+                            <div class="insight-content">
+                                <strong>Melhoria identificada</strong>
+                                <p>Seu humor melhorou 15% esta semana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-nav">
+                        <div class="nav-item">🏠</div>
+                        <div class="nav-item active">📊</div>
+                        <div class="nav-item">🔔</div>
+                        <div class="nav-item">💚</div>
+                    </div>
+                </div>
+
+                <!-- Tela 4: Alertas -->
+                <div class="screen" id="screen-alertas">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <h2>Alertas</h2>
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="alert-card priority-low">
+                            <div class="alert-header">
+                                <div class="alert-icon">💚</div>
+                                <div class="alert-header-content">
+                                    <strong>Tudo bem</strong>
+                                    <span class="alert-time">Hoje, 08:30</span>
+                                </div>
+                            </div>
+                            <p>Seus registros estão dentro da normalidade</p>
+                        </div>
+
+                        <div class="alert-card priority-medium">
+                            <div class="alert-header">
+                                <div class="alert-icon">🟡</div>
+                                <div class="alert-header-content">
+                                    <strong>Atenção</strong>
+                                    <span class="alert-time">Ontem, 14:20</span>
+                                </div>
+                            </div>
+                            <p>Estresse elevado por 3 dias consecutivos</p>
+                            <div class="alert-action">
+                                <button class="btn-secondary small">Ver detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="alert-card priority-high">
+                            <div class="alert-header">
+                                <div class="alert-icon">🟠</div>
+                                <div class="alert-header-content">
+                                    <strong>Recomendação</strong>
+                                    <span class="alert-time">2 dias atrás</span>
+                                </div>
+                            </div>
+                            <p>Aumento de sintomas comportamentais detectado</p>
+                            <div class="alert-action">
+                                <button class="btn-primary small">Contatar profissional</button>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <p>🔔 Alertas são enviados automaticamente para sua equipe de saúde</p>
+                        </div>
+                    </div>
+                    <div class="bottom-nav">
+                        <div class="nav-item">🏠</div>
+                        <div class="nav-item">📊</div>
+                        <div class="nav-item active">🔔</div>
+                        <div class="nav-item">💚</div>
+                    </div>
+                </div>
+
+                <!-- Tela 5: Autocuidado -->
+                <div class="screen" id="screen-autocuidado">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <h2>Autocuidado</h2>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="care-section">
+                            <div class="care-header">
+                                <div class="care-icon-large">✨</div>
+                                <h3>Diário Positivo</h3>
+                                <p>Registre 3 coisas boas do seu dia</p>
+                            </div>
+                            <div class="positive-list">
+                                <div class="positive-item">
+                                    <input type="text" placeholder="1. O que foi bom hoje?" class="positive-input">
+                                </div>
+                                <div class="positive-item">
+                                    <input type="text" placeholder="2. O que mais te fez feliz?" class="positive-input">
+                                </div>
+                                <div class="positive-item">
+                                    <input type="text" placeholder="3. Pelo que você é grato hoje?" class="positive-input">
+                                </div>
+                            </div>
+                            <button class="btn-primary full-width">Salvar</button>
+                        </div>
+
+                        <div class="care-section">
+                            <div class="care-header">
+                                <div class="care-icon-large">🧘</div>
+                                <h3>Exercícios de Respiração</h3>
+                                <p>Pausa de 5 minutos</p>
+                            </div>
+                            <div class="breathing-exercise">
+                                <div class="breathing-circle">
+                                    <span>Inspire</span>
+                                </div>
+                                <button class="btn-secondary">Começar exercício</button>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-content">
+                                <strong>7 dias consecutivos</strong>
+                                <p>Parabéns por manter seu autocuidado!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-nav">
+                        <div class="nav-item">🏠</div>
+                        <div class="nav-item">📊</div>
+                        <div class="nav-item">🔔</div>
+                        <div class="nav-item active">💚</div>
+                    </div>
+                </div>
+
+                <!-- Tela 6: Relatórios -->
+                <div class="screen" id="screen-relatorios">
+                    <div class="screen-header">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <div class="signal-battery">
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="app-header">
+                            <h2>Relatórios</h2>
+                        </div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="report-card">
+                            <div class="report-icon">📄</div>
+                            <div class="report-content">
+                                <strong>Relatório Semanal</strong>
+                                <p>18 a 24 de Novembro</p>
+                                <span class="report-status">Atualizado</span>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">📤</button>
+                            </div>
+                        </div>
+
+                        <div class="report-card">
+                            <div class="report-icon">📄</div>
+                            <div class="report-content">
+                                <strong>Relatório Mensal</strong>
+                                <p>Novembro 2025</p>
+                                <span class="report-status">Em preparação</span>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn-icon disabled">👁️</button>
+                                <button class="btn-icon disabled">📤</button>
+                            </div>
+                        </div>
+
+                        <div class="report-summary">
+                            <h3>Resumo do Relatório</h3>
+                            <div class="summary-item">
+                                <span>Total de registros</span>
+                                <strong>21 dias</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Humor médio</span>
+                                <strong>7.2/10</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Alertas gerados</span>
+                                <strong>3</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Dias de autocuidado</span>
+                                <strong>18</strong>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <p>📋 Relatórios são automaticamente compartilhados com sua equipe de saúde</p>
+                        </div>
+                    </div>
+                    <div class="bottom-nav">
+                        <div class="nav-item">🏠</div>
+                        <div class="nav-item">📊</div>
+                        <div class="nav-item">🔔</div>
+                        <div class="nav-item">💚</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mockup-footer">
+            <p><strong>Nota:</strong> Estes são protótipos visuais da versão inicial. Design e funcionalidades podem ser ajustados durante o desenvolvimento.</p>
+            <a href="index.html" class="back-link">← Voltar para apresentação</a>
+        </footer>
+    </div>
+
+    <script src="mockup-script.js"></script>
+</body>
+</html>
+

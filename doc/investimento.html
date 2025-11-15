@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justificativa do Investimento - Diário do Cuidador</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .investment-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .investment-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .investment-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .investment-header .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-5px);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section h4 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-xl);
+            margin-bottom: 3rem;
+        }
+
+        .executive-summary h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .summary-item {
+            text-align: center;
+        }
+
+        .summary-item .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-item .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .cost-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cost-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .cost-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cost-card .amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .responsibilities-list,
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .responsibilities-list li,
+        .benefits-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .responsibilities-list li::before,
+        .benefits-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .financial-table th,
+        .financial-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .financial-table th {
+            background: var(--bg-accent);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .financial-table tr:last-child td {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--bg-accent);
+            color: var(--primary-color);
+        }
+
+        .payment-timeline {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .payment-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .payment-item strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .guarantee-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guarantee-card h4 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .optional-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-accent) 0%, white 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            margin: 1.5rem 0;
+        }
+
+        .footer-info {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .investment-page {
+                padding: 2rem 1rem;
+            }
+
+            .investment-header h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .cost-breakdown,
+            .guarantees-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="investment-page">
+        <a href="../index.html#custos" class="back-link">
+            ← Voltar para apresentação
+        </a>
+
+        <div class="investment-header">
+            <h1>Justificativa do Investimento</h1>
+            <p class="subtitle">Diário do Cuidador MVP</p>
+        </div>
+
+        <div class="executive-summary section">
+            <h2>Resumo Executivo</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Investimento Total</div>
+                    <div class="value">R$ 142.900</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Prazo</div>
+                    <div class="value">18 semanas</div>
+                    <div class="label" style="margin-top: 0.5rem;">(4,5 meses)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Resultado</div>
+                    <div class="value" style="font-size: 1.2rem;">Plataforma móvel completa e funcional</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>O Que Está Incluído Neste Investimento?</h2>
+
+            <h3>1. Desenvolvimento do Aplicativo (R$ 107.100)</h3>
+
+            <div class="cost-breakdown">
+                <div class="cost-card">
+                    <h4>1.1 Desenvolvedor Full-stack</h4>
+                    <div class="amount">R$ 81.000</div>
+                    <p><strong>Duração:</strong> 1,5 desenvolvedores por 18 semanas (4,5 meses)</p>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <ul class="responsibilities-list">
+                        <li>Desenvolve o aplicativo mobile (Android e iPhone)</li>
+                        <li>Cria o sistema de servidor que armazena e processa os dados com segurança</li>
+                        <li>Implementa todas as funcionalidades: registro diário, alertas automáticos, gráficos, relatórios</li>
+                        <li>Garante que tudo funcione de forma integrada e segura</li>
+                    </ul>
+                </div>
+
+                <div class="cost-card">
+                    <h4>1.2 Designer de Interface e Experiência</h4>
+                    <div class="amount">R$ 18.000</div>
+                    <p><strong>Duração:</strong> 0,5 designer por 18 semanas (4,5 meses)</p>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <ul class="responsibilities-list">
+                        <li>Cria a aparência visual do aplicativo</li>
+                        <li>Garante interface intuitiva para pessoas de 40-70 anos</li>
+                        <li>Testa e ajusta para garantir usabilidade</li>
+                    </ul>
+                </div>
+
+                <div class="cost-card">
+                    <h4>1.3 Testador de Qualidade</h4>
+                    <div class="amount">R$ 8.100</div>
+                    <p><strong>Duração:</strong> 0,3 testador por 18 semanas (4,5 meses)</p>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <ul class="responsibilities-list">
+                        <li>Testa todas as funcionalidades antes do lançamento</li>
+                        <li>Encontra e corrige problemas</li>
+                        <li>Garante confiabilidade e segurança dos dados</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2. Infraestrutura e Hospedagem (R$ 4.800)</h3>
+            <p>Custo para os primeiros 6 meses de operação:</p>
+            
+            <div class="cost-breakdown">
+                <div class="cost-card">
+                    <h4>Hospedagem do Servidor</h4>
+                    <div class="amount">R$ 300/mês</div>
+                </div>
+                <div class="cost-card">
+                    <h4>Banco de Dados</h4>
+                    <div class="amount">R$ 200/mês</div>
+                </div>
+                <div class="cost-card">
+                    <h4>Armazenamento de Arquivos</h4>
+                    <div class="amount">R$ 150/mês</div>
+                </div>
+                <div class="cost-card">
+                    <h4>Monitoramento e Segurança</h4>
+                    <div class="amount">R$ 150/mês</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Total mensal:</strong> R$ 800/mês | <strong>6 meses:</strong> R$ 4.800</p>
+                <p style="margin-top: 1rem;"><strong>Por que serviços pagos são necessários:</strong></p>
+                <ul class="responsibilities-list">
+                    <li>Segurança adequada para dados de saúde (LGPD)</li>
+                    <li>Garantia de disponibilidade 24 horas</li>
+                    <li>Suporte técnico quando necessário</li>
+                </ul>
+            </div>
+
+            <h3>3. Pesquisa Clínica (R$ 31.000) <span class="optional-badge">OPCIONAL</span></h3>
+            <p>Componente opcional para validação científica da eficácia da plataforma.</p>
+
+            <div class="cost-breakdown">
+                <div class="cost-card">
+                    <h4>Bolsas de Pesquisa</h4>
+                    <div class="amount">R$ 24.000</div>
+                    <p>2 pesquisadores por 6 meses</p>
+                </div>
+                <div class="cost-card">
+                    <h4>Materiais de Pesquisa</h4>
+                    <div class="amount">R$ 2.000</div>
+                    <p>Formulários, impressos, administrativos</p>
+                </div>
+                <div class="cost-card">
+                    <h4>Análise Estatística Externa</h4>
+                    <div class="amount">R$ 5.000</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Benefícios:</strong></p>
+                <ul class="benefits-list">
+                    <li>Comprova que a plataforma funciona e reduz sobrecarga</li>
+                    <li>Gera dados científicos para publicação</li>
+                    <li>Aumenta credibilidade junto a profissionais de saúde</li>
+                    <li>Facilita aprovação em instituições de saúde</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Investimento sem pesquisa clínica:</strong> R$ 111.900</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Resumo Financeiro</h2>
+            <table class="financial-table">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desenvolvimento MVP</td>
+                        <td>R$ 107.100</td>
+                    </tr>
+                    <tr>
+                        <td>Infraestrutura (6 meses)</td>
+                        <td>R$ 4.800</td>
+                    </tr>
+                    <tr>
+                        <td>Pesquisa Clínica (opcional)</td>
+                        <td>R$ 31.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL MVP</strong></td>
+                        <td><strong>R$ 142.900</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Cronograma de Pagamento</h2>
+            <div class="payment-timeline">
+                <div class="payment-item">
+                    <strong>Mês 1-2 (Fase 0):</strong> R$ 30.000
+                    <ul class="responsibilities-list" style="margin-top: 0.5rem;">
+                        <li>Início do desenvolvimento</li>
+                        <li>Protótipos e validação</li>
+                    </ul>
+                </div>
+                <div class="payment-item">
+                    <strong>Mês 3-4 (Fase 1):</strong> R$ 50.000
+                    <ul class="responsibilities-list" style="margin-top: 0.5rem;">
+                        <li>Desenvolvimento principal</li>
+                        <li>Maior parte do trabalho técnico</li>
+                    </ul>
+                </div>
+                <div class="payment-item">
+                    <strong>Mês 5 (Fase 2):</strong> R$ 30.000
+                    <ul class="responsibilities-list" style="margin-top: 0.5rem;">
+                        <li>Testes e ajustes finais</li>
+                        <li>Preparação para lançamento</li>
+                    </ul>
+                </div>
+                <div class="payment-item">
+                    <strong>Custos Contínuos:</strong> R$ 800/mês (infraestrutura)
+                    <p style="margin-top: 0.5rem;">Começa após lançamento</p>
+                </div>
+                <div class="payment-item">
+                    <strong>Pesquisa (opcional):</strong> R$ 31.000
+                    <p style="margin-top: 0.5rem;">Pode ser dividida ao longo do projeto ou paga após conclusão</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Retorno sobre o Investimento (ROI)</h2>
+
+            <h3>Economia Futura em Saúde</h3>
+            <ul class="responsibilities-list">
+                <li><strong>Detecção precoce:</strong> Evita emergências (R$ 500-2.000 por emergência evitada)</li>
+                <li><strong>Redução de internações:</strong> Economia de R$ 5.000-15.000 por internação evitada</li>
+                <li><strong>Melhoria na gestão:</strong> Reduz erros e gastos desnecessários</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Cálculo:</strong> Em 1-2 anos, o investimento pode se pagar apenas em economia com saúde.</p>
+            </div>
+
+            <h3>Escalabilidade</h3>
+            <p>Uma vez desenvolvido, pode ser usado por:</p>
+            <ul class="responsibilities-list">
+                <li>Centenas ou milhares de cuidadores</li>
+                <li>Diferentes instituições de saúde</li>
+                <li>Diferentes cidades e regiões</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Custo por usuário:</strong></p>
+                <ul class="responsibilities-list">
+                    <li>100 cuidadores: R$ 1.429 por cuidador</li>
+                    <li>500 cuidadores: R$ 286 por cuidador</li>
+                    <li>1.000 cuidadores: R$ 143 por cuidador</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Garantias</h2>
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <h4>1. Entrega Funcional</h4>
+                    <ul class="responsibilities-list">
+                        <li>Todas as funcionalidades descritas serão entregues</li>
+                        <li>Sistema testado e funcionando antes do lançamento</li>
+                        <li>Suporte inicial incluído</li>
+                    </ul>
+                </div>
+                <div class="guarantee-card">
+                    <h4>2. Qualidade</h4>
+                    <ul class="responsibilities-list">
+                        <li>Código revisado e testado</li>
+                        <li>Segurança de dados garantida (LGPD)</li>
+                        <li>Interface testada com usuários reais</li>
+                    </ul>
+                </div>
+                <div class="guarantee-card">
+                    <h4>3. Documentação</h4>
+                    <ul class="responsibilities-list">
+                        <li>Tudo documentado para manutenção futura</li>
+                        <li>Treinamento para equipe de suporte</li>
+                        <li>Manual de uso disponível</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <h4>Posso parcelar este investimento?</h4>
+                <p>Sim, o investimento pode ser dividido conforme o cronograma de desenvolvimento (3-4 parcelas).</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>E se eu quiser apenas parte do projeto?</h4>
+                <p>Podemos ajustar escopo e custo. Sem pesquisa clínica = R$ 111.900.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Quanto tempo leva para ver resultados?</h4>
+                <ul class="responsibilities-list">
+                    <li>Desenvolvimento: 4,5 meses</li>
+                    <li>Primeiros resultados: 6 meses após lançamento</li>
+                    <li>Validação completa: 12-18 meses</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h4>Posso usar depois para outras coisas?</h4>
+                <p>Sim, a plataforma pode ser adaptada para outros contextos de saúde.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>E se algo der errado?</h4>
+                <p>Há garantias de entrega e testes extensivos. Cada fase tem validação antes de avançar.</p>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p><strong>Última atualização:</strong> Novembro 2025</p>
+            <p><strong>Versão:</strong> 1.0</p>
+        </div>
+    </div>
+</body>
+</html>
+
